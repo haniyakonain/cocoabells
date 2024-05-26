@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cocoa bell's - Chocolate Shop Website </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    
+
+    <!-- Favicon -->
+     <link rel="icon" href="data:image/jpeg;base64,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"
+          type="image/x-icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white pr-3" href="">Explore</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white px-3" href="">The</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pl-3" href="">Happiness</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-white px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-white px-3" href="https://www.linkedin.com/in/saira-siddiq-1a0a7825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-white px-3" href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">cocoa</span>bell's</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Product</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">cocoa</span>bell's</h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/bag1.png" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Yummy & Delicious</h4>
+                            <h1 class="display-3 text-white">Indulge in the art of chocolate</h1>
+                            <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/bag2.png" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Yummy & Delicious</h4>
+                            <h1 class="display-3 text-white mb-md-4">Indulge in the art of chocolate</h1>
+                            <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" 
+                          class="btn btn-primary py-md-3 px-md-5 mt-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n1"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n1"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <h1 class="section-title position-relative text-center mb-5">Delicious Chocolate's <br> Made With Love </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 py-5">
+                    <h4 class="font-weight-bold mb-3">About Us</h4>
+                    <h5 class="text-muted mb-3">Unwrap the happiness and discover your new favorite chocolate today,
+Treat yourself to a moment of pure indulgence with our handcrafted chocolates.</h5>
+                    <p>
+A heaven for chocolate lovers, Where happiness comes in bite-sized pieces. Experience the unconventional with our unique chocolate creations, using exotic ingredients and unexpected flavor combinations.
+We source only the ethically sourced, sustainable chocolate to create luxury chocolates you can feel good about indulging in.
+</p>
+                    <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Shop Now</a>
+                </div>
+                <div class="col-lg-4" style="min-height: 400px;">
+                    <div class="position-relative h-100 rounded overflow-hidden">
+                        <img class="position-absolute w-100 h-100" src="img/air3.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4 py-5">
+                    <h4 class="font-weight-bold mb-3">Our Features</h4>
+                    <p>Impress your loved ones with a decadent gift from our exquisite chocolate collection.</p>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Customized Packaging</h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Exotic Flavors</h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Luxury Chocolates</h5>
+                    <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Promotion Start -->
+    <div class="container-fluid my-5 py-5 px-0">
+        <div class="row bg-primary m-0">
+            <div class="col-md-6 px-0" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="img/pic1.jpg" style="object-fit: cover;">
+                    <button type="button" class="btn-play" data-toggle="modal"
+                        data-src="vid.mp4" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 py-5 py-md-0 px-0">
+                <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                    <div class="d-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                        style="width: 100px; height: 100px;">
+                        <h3 class="font-weight-bold text-secondary mb-0">&hearts;</h3>
+                    </div>
+                    <h3 class="font-weight-bold text-white mt-3 mb-4">Chocolate</h3>
+                    <p class="text-white mb-4">At Cocoabell's, we go beyond ordinary chocolate. We use only the finest, ethically sourced cocoa beans and craft our chocolates with unwavering passion and creativity. Our unique flavor combinations and hand-painted designs ensure that each piece is a delightful surprise for your senses.</p>
+                    <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Promotion End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Best Services We Provide For Our Customer's</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel service-carousel">
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/air6.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h5>
+                                <p>Selecting ethically sourced, high-grade cocoa beans with desirable flavor profiles and consistent characteristics.</p>
+                                <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/air4.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Innovative</h5>
+                                <p>Constantly exploring new flavor combinations, production techniques, and sustainable alternatives.</p>
+                                <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/air7.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Hygiene Practices</h5>
+                                <p>Prioritize cleanliness and sanitation throughout the entire chocolate-making process to guarantee food safety.</p>
+                               <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-img mx-auto">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="img/air3.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
+                                <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Customer feedback</h5>
+                                <p>Love to hear from you. Actively listen to customer feedback to understand their preferences and identify areas for improvement.</p>
+                                <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-secondary mt-2">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid my-5 py-5 px-0">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-5">
+                <h1 class="section-title position-relative text-center mb-5">Delicious Chocolates Made With Love</h1>
+            </div>
+        </div>
+        <div class="row m-0 portfolio-container">
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air1.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air2.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air3.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air4.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air6.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 p-0 portfolio-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/air7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb-5">Best Prices We Offer For Chocolate Lovers</h1>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel product-carousel">
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">60/-</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/air1.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Glitter heart pops 
+                             <br>  (6 in a pack) </h5>
+                            <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Order Now</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">60/-</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/air3.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Sugar heart pops  <br>  (6 in a pack)</h5>
+                            <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Order Now</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">80/-</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/air2.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Nutty almond bar<br>  (1 in a pack)</h5>
+                             <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Order Now</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">60/-</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/air4.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Strawberry pops<br>  (6 in a pack)</h5>
+                             <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Order Now</a>
+                        </div>
+                        <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+                                <h4 class="font-weight-bold text-white mb-0">90/-</h4>
+                            </div>
+                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3" style="width: 150px; height: 150px;">
+                                <img class="rounded-circle w-100 h-100" src="img/air11.jpg" style="object-fit: cover;">
+                            </div>
+                            <h5 class="font-weight-bold mb-4">Strawberry cheese cake<br>  (6 in a pack)</h5>
+                            <a href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv" class="btn btn-primary py-md-3 px-md-5 mt-2">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative mb">Made With Love For Your Loved Ones's</h1>
+                </div>
+            <div class="row">
+                        <div class="team-item">
+                            <div class="team-img mx-auto">
+                                <img class="rounded-circle w-100 h-100" src="img/air12.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
+                                <h2 class="font-weight-bold mt-5 mb pt-5"><i>Our Business Specializes In Customizing Orders To Meet Your Unique Needs With Us.<br> We Are Here To Bring Your Vision To Life.</i></h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Customers Say About Our Famous Chocolates</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Awesome Chocolate, taste's so good that I want to have more.</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/1.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Nancy</h5>
+                            <span>Undergrad Chef</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">This shop is a chocolate lover's dream! They have a huge selection of chocolates, from classic truffles to more adventurous flavors.</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/3.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Noah</h5>
+                            <span>Student</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">The chocolates were beautifully packaged and arrived fresh and delicious. I highly recommend this shop!</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/2.jpg" alt="">
+                            <h5 class="font-weight-bold m-0">Haniya</h5>
+                            <span>Undergrad Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">Cocoa</span>bell's</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.linkedin.com/in/saira-siddiq-1a0a7825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.instagram.com/cocoabells_?igsh=MjY2YzNqanFwcHRv"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
+                            <p class="mb-2">Hyderabad, India</p>
+                            <p class="mb-0">+91 87903 19365</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
+                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
+                            <p class="mb-0">Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed and Developed by <a href="https://www.linkedin.com/in/haniya-konain-210882251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Haniya Konain</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
