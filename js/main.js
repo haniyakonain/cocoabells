@@ -1,23 +1,22 @@
 (function ($) {
     "use strict";
-    
+
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            
+
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 45
             }, 1500, 'easeInOutExpo');
-            
+
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
         }
     });
-    
-    
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -30,7 +29,6 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-
 
     // Modal Video
     $(document).ready(function () {
@@ -49,7 +47,6 @@
         })
     });
 
-
     // Service and team carousel
     $(".service-carousel, .team-carousel").owlCarousel({
         autoplay: false,
@@ -63,21 +60,12 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
         responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
+            0:{ items:1 },
+            576:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
         }
     });
-
 
     // Product carousel
     $(".product-carousel").owlCarousel({
@@ -92,21 +80,12 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
         responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            992:{
-                items:4
-            }
+            0:{ items:1 },
+            576:{ items:2 },
+            768:{ items:3 },
+            992:{ items:4 }
         }
     });
-
 
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -121,7 +100,6 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -130,6 +108,12 @@
         loop: true,
         items: 1
     });
-    
-})(jQuery);
 
+    // Add to Cart
+    $(".add-to-cart").on("click", function () {
+        const productId = $(this).data("product-id");
+        // Add product to cart logic here
+        console.log(`Product ${productId} added to cart`);
+    });
+
+})(jQuery);
