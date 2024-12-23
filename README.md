@@ -124,4 +124,4 @@ Follow us on social media for the latest updates!
 
 ---
 
-Made with ❤️ by haniya konain.
+Made with ❤️ by **Haniya Konain**.
