@@ -13,7 +13,7 @@ Cocoabell's is a chocolate lover's paradise, offering handcrafted chocolates mad
 
 ## 🌐 Live Demo
 
-Visit the live website: [cocoabells.example.com](https://cocoabells.example.com)
+Visit the live website: [cocoabells.in](https://cocoabells.in)
 
 ---
 
